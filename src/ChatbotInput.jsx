@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './chatbotInput.css';
 
 function ChatbotInput({chatMessages, setChatMessages}) {
     const [inputText, setInputText] = useState(" ");
@@ -19,9 +20,9 @@ function ChatbotInput({chatMessages, setChatMessages}) {
     }
     return (
         <>  
-            <div className="chatbot-input">
-                <input placeholder="say something" onChange={inputValue} value={inputText}/>
-                <button onClick={sendMessage}>search</button>
+            <div className="chatbot-container">
+                <input className="chat-input" placeholder="say something" onChange={inputValue} value={inputText}/>
+                <button className="send-button" onClick={sendMessage}>send</button>
             </div>
         </>
     )

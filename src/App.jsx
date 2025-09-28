@@ -6,7 +6,7 @@ import ChatbotMessages from './ChatbotMessages'
 
 function App() {
 
-          const [chatMessages, setChatMessages] = useState([
+        const [chatMessages, setChatMessages] = useState([
         {
             message : "Hello chatbot",
             sender : "user",
@@ -31,9 +31,11 @@ function App() {
 
   return (
     <>
-      <ChatbotInput chatMessages={chatMessages} setChatMessages={setChatMessages}/>
-      <div id='chatbot-body'>
-        <ChatbotMessages chatMessages={chatMessages}/>
+      <div className='appClass'>
+          <ChatbotInput chatMessages={chatMessages} setChatMessages={setChatMessages}/>
+          <div id='chatbot-body'>
+            <ChatbotMessages chatMessages={chatMessages}/>
+          </div>
       </div>
     </>
   )
